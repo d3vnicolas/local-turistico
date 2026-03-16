@@ -1,0 +1,20 @@
+$background-default: #F5F4F0;
+$border-primary: #F5F4F0;
+
+$text-primary: #1B1B1B;
+$text-secondary: #333333;
+$text-tertiary: #696969;
+$text-headline: #E1624F;
+
+$accent-blue: #0C51A7;
+$accent-orange: #E95E10;
+$accent-pink: #e5245e;
+$accent-purple: #591b98;
+
+@font-face {
+    font-family: 'Open sans';
+    src: url('../public/fonts/OpenSans-VariableFont_wdth\,wght.ttf') format('truetype');
+    font-weight: 100 800;
+    font-style: normal;
+    font-display: swap;
+}
