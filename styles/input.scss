@@ -1,4 +1,4 @@
-@use "_guide";
+@use "guide";
 
 * {
     margin: 0;
@@ -6,7 +6,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     overflow-x: hidden;
 }
 
@@ -16,4 +17,61 @@ html {
 
 body {
     font-size: 1.4rem;
+    font-family: "Open Sans", sans-serif;
+    padding: 72px 16px;
+}
+
+img {
+    border-radius: guide.$image-rounded;
+    display: block;
+    max-width: 100%;
+}
+
+hr {
+    border: 1px solid guide.$border-primary;
+    margin: 0 auto;
+    max-width: guide.$general__max-width;
+    width: 100vw;
+}
+
+.header,
+.main,
+.footer {
+    margin: 0 auto;
+    max-width: guide.$general__max-width;
+    width: 100vw;
+}
+
+.header,
+.main {
+    &__subtitle {
+        color: guide.$text-headline;
+        display: block;
+        font-size: 1.6rem;
+        font-weight: bold;
+        line-height: 1;
+        margin-bottom: 12px;
+    }
+
+    &__title {
+        color: guide.$text-primary;
+        font-size: 3.6rem;
+        font-weight: bold;
+        line-height: 1;
+        margin-bottom: 48px;
+    }
+}
+
+.header {
+    &__image {
+        margin-bottom: 16px;
+    }
+
+    &__caption {
+        color: guide.$text-secondary;
+        font-size: 1.5rem;
+        font-style: italic;
+        margin-bottom: 32px;
+        text-align: center;
+    }
 }
