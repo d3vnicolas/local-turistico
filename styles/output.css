@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Open sans";
   src: url("../public/fonts/OpenSans-VariableFont_wdth,wght.ttf") format("truetype");
@@ -5,6 +6,25 @@
   font-style: normal;
   font-display: swap;
 }
+/*
+* Utilities
+* ========================================================================== */
+.color-accent-blue {
+  color: #0C51A7;
+}
+
+.color-accent-orange {
+  color: #E95E10;
+}
+
+.color-accent-purple {
+  color: #591b98;
+}
+
+.color-accent-pink {
+  color: #e5245e;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -44,7 +64,7 @@ hr {
 .footer {
   margin: 0 auto;
   max-width: 1120px;
-  width: 100vw;
+  width: 100%;
 }
 
 .header__subtitle,
@@ -66,7 +86,9 @@ hr {
 }
 
 .header__image {
+  aspect-ratio: 1120/660;
   margin-bottom: 16px;
+  object-fit: cover;
 }
 .header__caption {
   color: #333333;
@@ -74,6 +96,77 @@ hr {
   font-style: italic;
   margin-bottom: 32px;
   text-align: center;
+}
+.header + hr {
+  margin-bottom: 64px;
+}
+
+.main__title {
+  margin-bottom: 16px;
+}
+.main__paragraph {
+  color: #333333;
+  font-size: 1.6rem;
+  margin-bottom: 64px;
+}
+.main__image {
+  aspect-ratio: 1120/350;
+  object-fit: cover;
+  margin-bottom: 16px;
+}
+.main__section-title {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+.main__section-paragraph {
+  color: #333333;
+  font-size: 1.6rem;
+  margin-bottom: 28px;
+}
+.main__goodto {
+  font-weight: bold;
+  list-style-position: inside;
+  margin-bottom: 64px;
+}
+.main__goodto li {
+  font-weight: normal;
+  list-style: none;
+  position: relative;
+  padding: 0 0 0 12px;
+  margin: 0 0 0 4px;
+  font-weight: bold;
+}
+.main__goodto li:nth-child(1) {
+  color: #0C51A7;
+}
+.main__goodto li::before {
+  content: "•";
+  color: #1B1B1B;
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.main__block:last-of-type .main__goodto {
+  margin-bottom: 32px;
+}
+
+.footer hr {
+  margin-bottom: 32px;
+}
+.footer__phrase {
+  color: #333333;
+  font-size: 1.6rem;
+  text-align: center;
+}
+.footer__withlove {
+  color: #333333;
+  display: block;
+  margin: 0 auto;
+  text-decoration: none;
+  margin-top: 72px;
+  width: fit-content;
 }
 
 /*# sourceMappingURL=output.css.map */

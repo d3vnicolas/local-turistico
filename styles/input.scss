@@ -39,7 +39,7 @@ hr {
 .footer {
     margin: 0 auto;
     max-width: guide.$general__max-width;
-    width: 100vw;
+    width: 100%;
 }
 
 .header,
@@ -64,7 +64,9 @@ hr {
 
 .header {
     &__image {
+        aspect-ratio: 1120 / 660;
         margin-bottom: 16px;
+        object-fit: cover;
     }
 
     &__caption {
@@ -73,5 +75,92 @@ hr {
         font-style: italic;
         margin-bottom: 32px;
         text-align: center;
+    }
+
+    +hr {
+        margin-bottom: 64px;
+    }
+}
+
+.main {
+    &__title {
+        margin-bottom: 16px;
+    }
+
+    &__paragraph {
+        color: guide.$text-secondary;
+        font-size: 1.6rem;
+        margin-bottom: 64px;
+    }
+
+    &__image {
+        aspect-ratio: 1120 / 350;
+        object-fit: cover;
+        margin-bottom: 16px;
+    }
+
+    &__section-title {
+        font-size: 28px;
+        margin-bottom: 12px;
+    }
+
+    &__section-paragraph {
+        color: guide.$text-secondary;
+        font-size: 1.6rem;
+        margin-bottom: 28px;
+    }
+
+    &__goodto {
+        font-weight: bold;
+        list-style-position: inside;
+        margin-bottom: 64px;
+
+        li {
+            font-weight: normal;
+            list-style: none;
+            position: relative;
+            padding: 0 0 0 12px;
+            margin: 0 0 0 4px;
+            font-weight: bold;
+
+            &:nth-child(1) {
+                color: guide.$accent-blue;
+            }
+
+            &::before {
+                content: "•";
+                color: guide.$text-primary;
+                font-size: 14px;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    &__block:last-of-type .main__goodto {
+        margin-bottom: 32px;
+    }
+}
+
+.footer {
+    hr {
+        margin-bottom: 32px;
+    }
+
+    &__phrase {
+        color: guide.$text-secondary;
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    &__withlove {
+        color: guide.$text-secondary;
+        display: block;
+        margin: 0 auto;
+        text-decoration: none;
+        margin-top: 72px;
+        width: fit-content;
     }
 }

@@ -22,3 +22,22 @@ $general__max-width: 1120px;
     font-style: normal;
     font-display: swap;
 }
+
+/*
+* Utilities
+* ========================================================================== */
+.color-accent-blue {
+    color: $accent-blue;
+}
+
+.color-accent-orange {
+    color: $accent-orange;
+}
+
+.color-accent-purple {
+    color: $accent-purple;
+}
+
+.color-accent-pink {
+    color: $accent-pink;
+}
